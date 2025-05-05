@@ -5,7 +5,7 @@ import { execFile } from 'child_process';
 const AUDIO_FILE_PATH = process.env.AUDIO_FILE_PATH; // Ensure this is set
 
 export async function POST() {
-  const audioFile = path.join(AUDIO_FILE_PATH!, 'welcome.ogg'); // Location where the file will be saved
+  const audioFile = path.join(AUDIO_FILE_PATH!, 'zcare.ogg'); // Location where the file will be saved
   const message_uuid = new Date().getTime();
 
   if (!fs.existsSync(audioFile)) {
@@ -53,7 +53,7 @@ export async function POST() {
       {
         lipSync: {
           ...lipSync,
-          metadata: { ...lipSync.metadata, soundFile: '/static/welcome.ogg' },
+          metadata: { ...lipSync.metadata, soundFile: '/static/zcare.ogg' },
         },
       },
       { status: 200 }

@@ -57,7 +57,7 @@ export function Avatar(props) {
           currentAudioTime <= mouthCue.end
         ) {
           appliedMorphTargets.push(visemesMapping[mouthCue.value]);
-          lerpMorphTarget(visemesMapping[mouthCue.value], 1, 0.2);
+          lerpMorphTarget(visemesMapping[mouthCue.value], 1, 0.1);
           break;
         }
       }
