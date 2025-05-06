@@ -2,7 +2,8 @@
 import { Canvas, useThree } from '@react-three/fiber';
 import { Environment, OrbitControls, useTexture } from '@react-three/drei';
 
-import { Avatar } from './Avatar';
+// import { Avatar } from './Avatar';
+import { AvatarTwo } from './AvatarTwo';
 
 const CustomebackgroundImage = () => {
   const texture = useTexture('assets/hospital.png');
@@ -20,7 +21,8 @@ const MainTalkingAvatar = () => {
     <Canvas shadows camera={{ position: [0, 0, 8], fov: 42 }}>
       <OrbitControls enableRotate={false} enableZoom={false} />
       <Environment preset='sunset' />
-      <Avatar position={[0, -3, 5]} scale={2} />
+      {/* <Avatar position={[0, -3, 5]} scale={2} /> */}
+      <AvatarTwo position={[0, -3, 5]} scale={2} />
       <CustomebackgroundImage />
     </Canvas>
   );
